@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Atkinson%20Hyperlegible:700|Atkinson%20Hyperlegible:400');
+
+:root {
+  --text: #edeae1;
+  --background: #13110c;
+  --primary: #cac3a9;
+  --secondary: #403f67;
+  --accent: #af7ca8;
+
+  --cardMargin: 10px;
+
+}
+
+body {
+  background-color: var(--background);
+  margin: 0 1em;
+  color: var(--text);
+}
+
+/* Introducing, The Font Block. */
+body {
+  font-family: 'Atkinson Hyperlegible';
+  font-weight: 400;
+  text-align: center;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Atkinson Hyperlegible';
+  font-weight: 700;
+}
+html {font-size: 100%;} /* 16px */
+h1 {font-size: 4.210rem; /* 67.36px */}
+h2 {font-size: 3.158rem; /* 50.56px */}
+h3 {font-size: 2.369rem; /* 37.92px */}
+h4 {font-size: 1.777rem; /* 28.48px */}
+h5 {font-size: 1.333rem; /* 21.28px */}
+small {font-size: 0.750rem; /* 12px */}
+/* And that concludes, The Font Block. */
+
+.equalRow {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+}
+
+
+.wrapper{
+  margin-right: auto;
+  margin-left:  auto;
+
+  max-width: 1200px;
+  
+  padding: 0 1em;
+  border-radius: 1em;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10em;
+  background-color: var(--secondary);
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+
+  padding: 2em;
+  margin-bottom: var(--cardMargin);
+}
+
+header > h1 {
+  font-size: 5em;
+  color: var(--text);
+}
+
+.card {
+  background-color: var(--primary);
+  border-radius: 1em;
+  padding: 1em;
+
+  margin-bottom: var(--cardMargin);
+}
+.card > h2 {
+  margin: 0;
+}
+
