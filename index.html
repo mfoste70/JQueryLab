@@ -7,30 +7,136 @@
     <script src="/js/main.js"></script>
     <link rel="stylesheet" href="/css/main.css" />
     <title>JQueryStartingPage</title>
-
-    <!-- Below is the text garbage needed for google font stuff, don't mind it. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- End text garbage. -->
   </head>
   <body>
     <div class="wrapper">
       <header id="navCard">
         <h1>Howdy Howdy.</h1>
       </header>
-      <section class="card">
+      <div class="card cardAudio">
         <h2>Introductions</h2>
-        <div class="equalRow">
-          <div>Image Placeholder</div>
+        <div class="equalRow headerRow">
+          <img src="/media/face.jpg" alt="My face, placed next to a cat." />
           <p>
-            For my site, I intend on making a portfoilo for myself and the
-            projects I've developed. I'm waffling on what specific subject to
-            make an exhibit out of (my web projects or my music hobby), but I
-            have A few site references/inspirations to explore. Apologies for
-            the indecisiveness.
+            For this temporary project, I intend on making a portfolio for
+            myself and the hobbies/projects I've made developed. It is in no way
+            meant to be formal or representative, but I figured this would be a
+            decent enough platform to experiment with JQuery.
+            <br />
+            <br />
+            As a future project, I'd like to put together some kind of custom
+            media/file player, but who knows.
           </p>
         </div>
-      </section>
+      </div>
+      <button class="accordion">Description (CHANGED WITH JQUERY)</button>
+      <div class="panel">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+          laboriosam praesentium nostrum vitae nihil non labore culpa error
+          officiis doloribus omnis magnam iusto, esse quibusdam obcaecati illo
+          explicabo, corporis eligendi? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Culpa minima, facere eveniet neque sed numquam et
+          nesciunt fugit nam porro cumque, totam harum reprehenderit facilis at
+          obcaecati dicta soluta tempora!
+        </p>
+      </div>
+
+      <div class="card cardAudio">
+        <h3>Morning</h3>
+        <p>
+          As the first piece I composed that got actual traction, "Morning" was
+          the initial spark I needed to pursue music performance and writing to
+          the extent that I have.
+        </p>
+        <audio controls>
+          <source src="/media/Morning.mp3" type="audio/mp3" />
+        </audio>
+      </div>
+      <button class="accordion">Description</button>
+      <div class="panel">
+        <p>
+          This piece takes the form of four small excerpts to represent and
+          illustrate the passage of time.
+        </p>
+      </div>
+
+      <div class="equalRow">
+        <div>
+          <div class="card cardAudio">
+            <h3>We're Going to War!</h3>
+            <p>
+              Strangely enough, this piece was born from a late-night party with
+              some of my old friends. We all made this horrid concoction of like
+              6 Monster energy drinks a bunch of sour candy, it was vile but
+              effective at fueling our "last hurrah" before going off to
+              college.
+            </p>
+            <audio controls>
+              <source src="/media/War.mp3" type="audio/mp3" />
+            </audio>
+          </div>
+          <button class="accordion">Description</button>
+          <div class="panel">
+            <p>
+              For this piece, my goal was to practice blending instruments
+              beyond their typical groupings while still giving each section its
+              own identity/theme.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Seafarer</h3>
+            <p>
+              This piece started off as my attempt at putting my old clarinet to
+              use. Surely if I wrote a piece with the clarinet at the forefront,
+              I could one day learn to play it again, right? Unfortunately, I
+              got carried away with all the harmonies and drama. But hey, I
+              think it turned out alright.
+            </p>
+            <audio controls>
+              <source src="/media/Seafarer.mp3" type="audio/mp3" />
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="card cardAudio">
+        <h3>Rococo</h3>
+        <p>
+          While more of an excerpt than a piece, this musical idea comes from a
+          creative collaboration I was in with a few other students on campus
+          where I was tasked to make something opulent, snobby, and grandiose,
+          hence the title "Rococo".
+        </p>
+        <audio controls>
+          <source src="/media/Rococo.mp3" type="audio/mp3" />
+        </audio>
+      </div>
+      <button class="accordion">Description</button>
+      <div class="panel">
+        <p>
+          Perhaps one day I'll build this into a proper piece. One day.
+          <br />
+          (I'm now realizing something went wrong during the export process, but
+          whatever.)
+        </p>
+      </div>
+
+      <footer>
+        <div class="card cardFooter">
+          <h3>Footer Garbage</h3>
+          <p>
+            Hi, please don't steal my stuff. I know it's not much but it has
+            value to me, ok?
+            <br />
+            Copyright - Me, go away.
+          </p>
+        </div>
+      </footer>
     </div>
+    <script src="js/main.js"></script>
+    <script src="js/accordion.js"></script>
   </body>
 </html>

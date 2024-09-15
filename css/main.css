@@ -2,19 +2,21 @@
 
 :root {
   --text: #edeae1;
+  --textAlt: #123456;
   --background: #13110c;
   --primary: #cac3a9;
   --secondary: #403f67;
   --accent: #af7ca8;
 
   --cardMargin: 10px;
+  --roundedEdge: .35em;
 
 }
 
 body {
   background-color: var(--background);
   margin: 0 1em;
-  color: var(--text);
+  color: var(--secondary);
 }
 
 /* Introducing, The Font Block. */
@@ -23,35 +25,83 @@ body {
   font-weight: 400;
   text-align: center;
 }
-h1, h2, h3, h4, h5 {
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Atkinson Hyperlegible';
   font-weight: 700;
+  margin: 0;
 }
-html {font-size: 100%;} /* 16px */
-h1 {font-size: 4.210rem; /* 67.36px */}
-h2 {font-size: 3.158rem; /* 50.56px */}
-h3 {font-size: 2.369rem; /* 37.92px */}
-h4 {font-size: 1.777rem; /* 28.48px */}
-h5 {font-size: 1.333rem; /* 21.28px */}
-small {font-size: 0.750rem; /* 12px */}
+
+html {
+  font-size: 100%;
+}
+
+/* 16px */
+h1 {
+  font-size: 4.210rem;
+  /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem;
+  /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem;
+  /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem;
+  /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem;
+  /* 21.28px */
+}
+
+small {
+  font-size: 0.750rem;
+  /* 12px */
+}
+
 /* And that concludes, The Font Block. */
 
 .equalRow {
+  /*   
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   align-items: center;
+  gap: var(--cardMargin); 
+  */
+
+  display: flex;
+  gap: var(--cardMargin);
+  min-height: 0;
+
+
 }
 
+.equalRow.headerRow {
+  display: flex;
+  align-items: center;
+}
 
-.wrapper{
+.wrapper {
   margin-right: auto;
-  margin-left:  auto;
+  margin-left: auto;
 
   max-width: 1200px;
-  
+
   padding: 0 1em;
-  border-radius: 1em;
+  border-radius: var(--roundedEdge);
 }
 
 header {
@@ -61,26 +111,113 @@ header {
   justify-content: center;
   height: 10em;
   background-color: var(--secondary);
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: var(--roundedEdge);
+  border-bottom-right-radius: var(--roundedEdge);
 
   padding: 2em;
   margin-bottom: var(--cardMargin);
 }
 
-header > h1 {
+header>h1 {
   font-size: 5em;
   color: var(--text);
 }
 
 .card {
   background-color: var(--primary);
-  border-radius: 1em;
+  border-radius: var(--roundedEdge);
   padding: 1em;
 
   margin-bottom: var(--cardMargin);
-}
-.card > h2 {
-  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+
 }
 
+.card>h2 {
+  margin-bottom: 16px;
+}
+
+.cardAudio {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cardFooter {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+img {
+  width: 50%;
+  border-radius: var(--roundedEdge);
+}
+
+/* Styling for Accordion set */
+.accordion {
+  background-color: var(--primary);
+  color: var(--secondary);
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.1s;
+  border-bottom-left-radius: var(--roundedEdge);
+  border-bottom-right-radius: var(--roundedEdge);
+  text-align: center;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--text);
+}
+
+.accordion.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: var(--primary);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: var(--cardMargin);
+  border-bottom-left-radius: var(--roundedEdge);
+  border-bottom-right-radius: var(--roundedEdge);
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .equalRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  img {
+    width: 100%;
+  }
+}
