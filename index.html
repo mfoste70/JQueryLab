@@ -49,56 +49,9 @@
           the initial spark I needed to pursue music performance and writing to
           the extent that I have.
         </p>
-        <audio id="track">
-          <source src="/media/Morning.mp3" type="audio/mpeg" />
+        <audio controls>
+          <source src="media/Morning.mp3" type="audio/mp3" />
         </audio>
-
-        <div id="player-container">
-          <!-- Progress -->
-          <div id="timeline">
-            <div id="scrub"></div>
-            <div id="playhead"></div>
-          </div>
-
-          <!-- Play button -->
-          <div id="play-pause" class="play" data-audio="/media/Morning.mp3">
-            Play
-          </div>
-
-          <!-- Artist Thumb-->
-          <div id="thumb"></div>
-
-          <div class="item-inner">
-            <!-- Title-->
-            <div class="item-title"></div>
-            <div class="item-subtitle">Morning Melody</div>
-
-            <!-- Time -->
-            <div id="time-bar">
-              <div id="time-holder">
-                <div id="is-left">
-                  <span id="current-time"> 00:00 </span>
-                </div>
-                <div id="is-right">
-                  <span id="duration-time">
-                    <span class="duration-minutes" data-duration-minutes="true"
-                      >0</span
-                    >:<span
-                      class="duration-minutes"
-                      data-duration-seconds="true"
-                      >00</span
-                    >
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--Repeat Button-->
-          <div class="repeat-button">
-            <div id="repeat" class="icon-repeat" repeat="0"></div>
-          </div>
-        </div>
       </div>
       <button class="accordion">Description</button>
       <div class="panel">
@@ -170,7 +123,26 @@
           whatever.)
         </p>
       </div>
-
+      <div class="card">
+        <h3>Image Interactivity Test Card</h3>
+        <div class="imageCollage">
+          <img
+            class="mod"
+            src="/media/cat1.jpg"
+            alt="My sweet cat, curled into a little ball."
+          />
+          <img
+            class="mod"
+            src="/media/cat2.jpg"
+            alt="My sweet cat, celebrating me washing my sheets."
+          />
+          <img
+            class="mod"
+            src="/media/cat3.jpg"
+            alt="My sweet cat, dozing off in the summer sun."
+          />
+        </div>
+      </div>
       <footer>
         <div class="card cardFooter">
           <h3>Footer Garbage</h3>
@@ -185,6 +157,6 @@
     </div>
     <script src="js/main.js"></script>
     <script src="js/accordion.js"></script>
-    <script src="/js/musicPlayer.js"></script>
+    <!-- <script src="/js/musicPlayer.js"></script> -->
   </body>
 </html>

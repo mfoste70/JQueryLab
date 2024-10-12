@@ -158,6 +158,11 @@ img {
   border-radius: var(--roundedEdge);
 }
 
+.mod{
+  width: 50%;
+  transition: 1s;
+}
+
 /* Styling for Accordion set */
 .accordion {
   background-color: var(--primary);
@@ -211,8 +216,18 @@ img {
   text-align: center;
 }
 
-/* Music Player CSS */
-  #player-container {
+.imageCollage {
+  display: flex;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--cardMargin);
+}
+
+/* Music Player CSS HIDDEN CUZ ITS NOT WORKING BUT I STILL WANT TO KEEP IT AROUND */
+  /* #player-container {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -236,7 +251,7 @@ img {
 
   /* Play / Pause */
 
-  #player-container #play-pause {
+  /* #player-container #play-pause {
     cursor: pointer;
     text-indent: -999999px;
     width: 80px;
@@ -265,7 +280,7 @@ img {
 
   /* Timeline */
 
-  #timeline {
+  /* #timeline {
     width: 100%;
     height: 10px;
     background: #bebebe;
@@ -286,10 +301,10 @@ img {
     width: 10px;
     height: 10px;
     background: var(--accent);
-  }
+  } */
 
   /* Time */
-  .item-inner {
+  /* .item-inner {
     display: block;
     float: left;
     padding-left: 15px;
@@ -309,10 +324,10 @@ img {
     bottom: auto;
     padding: 3px 7px;
     padding-left: 0;
-  }
+  } */
 
   /* Title */
-  .item-inner .item-title {
+  /* .item-inner .item-title {
     -webkit-flex-shrink: 1;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
@@ -337,10 +352,10 @@ img {
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-  }
+  } */
 
   /* Repeat */
-  .repeat-button {
+  /* .repeat-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -377,9 +392,11 @@ img {
     margin-left: unset;
     margin-top: unset;
     background-size: 22px;
-  }
+  } */
 
 /* End Music Player CSS */
+
+
 
 @media screen and (max-width: 750px) {
   .equalRow {
